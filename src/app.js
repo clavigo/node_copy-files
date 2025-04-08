@@ -11,6 +11,10 @@ const copyFile = () => {
     console.error('There are only one argument provided');
   }
 
+  if (params[0] === params[1]) {
+    return;
+  }
+
   try {
     data = fs.readFileSync(params[0], 'utf-8');
   } catch (err) {
